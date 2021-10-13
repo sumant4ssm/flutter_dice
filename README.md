@@ -2,5 +2,4 @@
 
 
 # Dicee 🎲
-![image](https://user-images.githubusercontent.com/25642677/137104939-3adb99b3-b651-4853-be2c-c3240063b63e.png)
-
+![image](https://user-images.githubusercontent.com/25642677/137105353-149572d9-7a61-4014-8f82-ad0855be499b.png)
