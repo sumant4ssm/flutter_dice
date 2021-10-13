@@ -6,10 +6,10 @@ void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
           title: Center(child: Text('Dicee')),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.blueGrey[700],
         ),
         body: DicePage(),
       ),
@@ -34,9 +34,7 @@ class _DicePageState extends State<DicePage> {
             // flex: 2,
             child: TextButton(
               onPressed: () {
-                setState(() {
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                });
+                randomGenerator();
               },
               child: Image.asset('images/dice$leftDiceNumber.png'),
             ),
@@ -44,9 +42,7 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
               onPressed: () {
-                setState(() {
-                  rightDiceNumber = Random().nextInt(6) + 1;
-                });
+                randomGenerator();
               },
               child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
@@ -54,5 +50,12 @@ class _DicePageState extends State<DicePage> {
         ],
       ),
     );
+  }
+
+  randomGenerator() {
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+    });
   }
 }
